@@ -1,0 +1,53 @@
+/** @format */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.Loaderparent {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadercircle {
+  border: 10px solid blue;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 255, 0.737);
+  box-shadow: 0px 0px 12px 9px rgba(135, 207, 235, 0.644);
+  animation-name: loader;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border-top-color: skyblue;
+  border-bottom-color: skyblue;
+}
+.loaderline {
+  width: 200px;
+  height: 3px;
+  background-color: blue;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  box-shadow: 1px 1px 15px 10px rgba(135, 207, 235, 0.797);
+  animation-name: loaderline;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes loaderline {
+  100% {
+    width: 100%;
+  }
+}
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
